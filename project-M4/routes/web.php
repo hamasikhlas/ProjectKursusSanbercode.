@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/master', function () {
     return view('layout.master');
 });
+
+Route::get('/admin', function () {
+    return view('layout.admin');
+});
+
+Route::get('/produk/create', 'Controller@create');
