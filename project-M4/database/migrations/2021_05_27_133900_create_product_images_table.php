@@ -15,11 +15,12 @@ class CreateProductImagesTable extends Migration
     {
         Schema::create('product_images', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',255);
-            $table->text('image_url');
-            $table->text('image_description');
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->string('name',255)->nullable(true);
+            $table->text('image_url')->nullable(true);
+            $table->text('image_description')->nullable(true);
+            $table->unsignedBigInteger('product_id')->nullable(true);
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
