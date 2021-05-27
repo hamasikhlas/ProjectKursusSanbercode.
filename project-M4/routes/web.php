@@ -11,12 +11,6 @@
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('auth.login');
-});
-=======
->>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -45,20 +39,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('/profil/{id}', 'ProfilController@update');
     Route::get('/profil/lengkapi', 'ProfilController@lengkapi');
     Route::get('/home', 'HomeController@index')->name('home');
+    //product
+    Route::resource('/product', ProductController::class);
+    //contact us
+    Route::resource('/contactus', ContactUsController::class);
 });
-
-<<<<<<< HEAD
-
-
 Auth::routes();
-
-
-=======
-Route::get('/produk/create', 'Controller@create');
-
-//product
-Route::resource('/product', ProductController::class);
-//contact us
-Route::resource('/contactus', ContactUsController::class);
-Auth::routes();
->>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904

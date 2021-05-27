@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ContactUs;
 use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
@@ -14,6 +15,8 @@ class ContactUsController extends Controller
     public function index()
     {
         //
+        $contact = ContactUs::all();
+        return view('contactus.contactUsList',compact('contact'));
     }
 
     /**
@@ -46,6 +49,8 @@ class ContactUsController extends Controller
     public function show($id)
     {
         //
+        $contact = ContactUs::find($id);
+        return view('contactus.contactUsShow',compact('contact'));
     }
 
     /**
@@ -80,5 +85,8 @@ class ContactUsController extends Controller
     public function destroy($id)
     {
         //
+        $contact = ContactUs::find($id);
+        $contact->delete();
+        return redirect('/contactus');
     }
 }

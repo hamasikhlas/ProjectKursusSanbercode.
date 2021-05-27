@@ -19,6 +19,7 @@ class CreateProductCategoriesTable extends Migration
             $table->text('description');
             $table->text('image_url');
             $table->text('image_description');
+            $table->timestamps();
         });
     }
     /**
