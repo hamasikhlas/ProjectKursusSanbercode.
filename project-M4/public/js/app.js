@@ -49855,11 +49855,31 @@ try {
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
+<<<<<<< HEAD
+=======
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+/**
+>>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
  * allows your team to easily build robust real-time web applications.
  */
+<<<<<<< HEAD
 // import Echo from 'laravel-echo';
+=======
+// import Echo from 'laravel-echo'
+>>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904
 // window.Pusher = require('pusher-js');
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
@@ -49957,8 +49977,13 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! /home/rhw/Documents/project-m4/project-M4/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /home/rhw/Documents/project-m4/project-M4/resources/sass/app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! D:\workspace-php\sanbercode-final-project\project-m4\project-M4\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\workspace-php\sanbercode-final-project\project-m4\project-M4\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904
 
 
 /***/ })

@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904
 class HomeController extends Controller
 {
     /**

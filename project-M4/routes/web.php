@@ -11,11 +11,18 @@
 |
 */
 
+<<<<<<< HEAD
 Route::get('/', function () {
     return view('auth.login');
 });
+=======
+>>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904
 
-Route::get('/master', function () {
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', function () {
     return view('layout.master');
 });
 
@@ -40,8 +47,18 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
 });
 
+<<<<<<< HEAD
 
 
 Auth::routes();
 
 
+=======
+Route::get('/produk/create', 'Controller@create');
+
+//product
+Route::resource('/product', ProductController::class);
+//contact us
+Route::resource('/contactus', ContactUsController::class);
+Auth::routes();
+>>>>>>> e6063a1623e4c7fa95ecc64902ac8260efad2904
