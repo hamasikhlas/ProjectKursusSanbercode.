@@ -22,7 +22,8 @@
                     </div>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Tambah</button>
+            <button type="submit" class="btn btn-primary btn-sm">Tambah</button>
+            <a href="/produk_categories" class="btn btn-warning btn-sm">Kembali</a>
         </form>
 </div>
 @endsection
