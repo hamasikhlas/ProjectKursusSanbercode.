@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/master', function () {
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', function () {
     return view('layout.master');
 });
 
@@ -24,3 +25,9 @@ Route::get('/admin', function () {
 });
 
 Route::get('/produk/create', 'Controller@create');
+
+//product
+Route::resource('/product', ProductController::class);
+//contact us
+Route::resource('/contactus', ContactUsController::class);
+Auth::routes();
