@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\CategoriesModel;
 use Illuminate\Http\Request;
 use App\Product;
-use App\ProductCategory;
 use App\ProductImage;
 use Illuminate\Support\Facades\File;
 
@@ -29,7 +29,7 @@ class ProductController extends Controller
     public function create()
     {
         //
-        $productCat = ProductCategory::all();
+        $productCat = CategoriesModel::all();
         return view('product.productCreate',compact('productCat'));
     }
 
@@ -46,7 +46,8 @@ class ProductController extends Controller
             'nama'=>'required',
             'description'=>'required',
             'productCategory'=>'required',
-            'formFileMultiple'=>'required|image|mimes:jpeg,png,jpg|max:2048'
+            'uploadFile'=>'required',
+            'uploadFile.*'=>'mimes:jpeg,png,jpg|max:2048',
         ]);
 
         $product = Product::create([
@@ -55,16 +56,31 @@ class ProductController extends Controller
             'product_category_id'=>$request->productCategory
         ]);
 
-       if($request->hasFile('formFileMultiple')){
-        $file = $request->file('formFileMultiple');
-        $nama_file = time()."_".$file->getClientOriginalName();
-        $tujuan_upload = public_path().'/data_file';
-		$file->move($tujuan_upload,$nama_file);
-        $product->productImages()->create([
-            'name'=>$nama_file,
-            'image_url'=>'/data_file/'.$nama_file,
-            'image_description'=>$request->description
-        ]);
+       if($request->hasFile('uploadFile')){
+           $uploads = $request->file('uploadFile');
+
+           foreach ($uploads as $files) {
+            $tujuan_upload = public_path().'/data_file';
+            $nama_file = time().'.'.$files->getClientOriginalExtension();
+            $files->move($tujuan_upload, $nama_file);
+            // $productImg->name=$nama_file;
+            // $productImg->image_url='/data_file/'.$nama_file;
+            // $productImg->image_description=$request->description;
+            $product->productImages()->create([
+                    'name'=>$nama_file,
+                    'image_url'=>'/data_file/'.$nama_file,
+                    'image_description'=>$request->description
+                ]);
+           }
+        // $file = $request->file('uploadFile');
+        // $nama_file = time()."_".$file->getClientOriginalName();
+        // $tujuan_upload = public_path().'/data_file';
+		// $file->move($tujuan_upload,$nama_file);
+        // $product->productImages()->create([
+        //     'name'=>$nama_file,
+        //     'image_url'=>'/data_file/'.$nama_file,
+        //     'image_description'=>$request->description
+        // ]);
        }
         $product->save();
         return redirect('/product');
@@ -92,7 +108,7 @@ class ProductController extends Controller
     public function edit($id)
     {
         $product = Product::with('ProductCategories')->find($id);
-        $productCat = ProductCategory::all();
+        $productCat = CategoriesModel::all();
         return view('product.productEdit',compact(['product','productCat']));
     }
 
@@ -130,7 +146,9 @@ class ProductController extends Controller
     {   
         $product = Product::find($id);
         $productImage = ProductImage::where('product_id',$id)->first();
-        File::delete(public_path().$productImage->image_url);
+        if ($productImage!=null) {
+            File::delete(public_path().$productImage->image_url);
+        }
         $product->delete();
         return redirect('/product');
     }

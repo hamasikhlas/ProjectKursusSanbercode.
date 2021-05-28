@@ -43,8 +43,8 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Gambar</label>
-          <input class="form-control" type="file" id="formFileMultiple" name="formFileMultiple"/>
-          @error('formFileMultiple')
+          <input class="form-control" type="file" id="uploadFile" name="uploadFile[]" multiple/>
+          @error('uploadFile')
             <div class="alert alert-danger">
                 {{ $message }}
             </div>
