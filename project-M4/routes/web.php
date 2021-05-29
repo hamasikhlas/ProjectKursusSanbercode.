@@ -26,6 +26,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin', function () {
         return view('layout.admin');
     });
+
+    //test
     
     // Route::get('/produk/create', 'Controller@create');
     Route::get('/produk_categories', 'CategoriesController@index');
