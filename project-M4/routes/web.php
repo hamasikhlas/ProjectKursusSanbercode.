@@ -27,7 +27,13 @@ Route::group(['middleware' => ['auth']], function () {
         return view('layout.admin');
     });
 
-    //test
+   //user 
+   Route::get('/master', 'HomeController@master');
+   Route::get('/produk', 'HomeController@produk');
+   Route::get('/computer', 'HomeController@computer');
+   Route::get('/laptop', 'HomeController@laptop');
+   Route::get('/tablet', 'HomeController@tablet');
+   Route::get('/about', 'HomeController@about');
     
     // Route::get('/produk/create', 'Controller@create');
     Route::get('/produk_categories', 'CategoriesController@index');

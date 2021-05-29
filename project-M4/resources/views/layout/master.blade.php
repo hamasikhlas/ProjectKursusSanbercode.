@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -61,28 +60,21 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                            <ul class="navbar-nav mr-auto">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="{{asset('user/index.html')}}">Home</a>
+                                 <a class="nav-link" href="/">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="{{asset('user/about.html')}}">About</a>
+                                 <a class="nav-link" href="/produk">Products</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="{{asset('user/computer.html')}}">Computer</a>
+                                 <a class="nav-link" href="/computer">Computer</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="{{asset('user/laptop.html')}}">Laptop</a>
+                                 <a class="nav-link" href="/laptop">Laptop</a>
+                              </li><li class="nav-item">
+                                 <a class="nav-link" href="/tablet">Tablet</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="{{asset('user/product.html')}}">Products</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="{{asset('user/contact.html')}}">Contact Us</a>
-                              </li>
-                              <li class="nav-item d_none">
-                                 <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                              </li>
-                              <li class="nav-item d_none">
-                                 <a class="nav-link" href="/login">Login</a>
+                                 <a class="nav-link" href="/about">About</a>
                               </li>
                            </ul>
                         </div>
@@ -228,21 +220,21 @@
                   <div class="box_text">
                      <i><img src="{{asset('user/images/thr.png')}}" alt="#"/></i>
                      <h3>Computer</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                     <p>Kata computer pada awalnya dipergunakan untuk menggambarkan orang yang perkerjaannya melakukan perhitungan aritmetika, dengan atau tanpa alat bantu, tetapi arti kata ini kemudian dipindahkan kepada mesin itu sendiri. </p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text">
                      <i><img src="{{asset('user/images/thr1.png')}}" alt="#"/></i>
                      <h3>Laptop</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                     <p>Laptop adalah komputer bergerak (bisa dipindahkan dengan mudah) yang berukuran relatif kecil dan ringan, beratnya berkisar dari 1-6 kg.Dari spesifikasi laptop tersebut, laptop dapat digunakan dalam lingkungan yang berbeda dari komputer. </p>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text">
                      <i><img src="{{asset('user/images/thr2.png')}}" alt="#"/></i>
                      <h3>Tablet</h3>
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                     <p>Tablet atau ponsel cerdas adalah kelas ponsel dari ponsel dan perangkat komputasi bergerak multiguna. Mereka dibedakan dari ponsel berfitur dengan kemampuan perangkat keras yang lebih kuat dan sistem operasi seluler yang luas.</p>
                   </div>
                </div>
             </div>
@@ -266,59 +258,20 @@
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
                               <figure><img src="{{asset('user/images/product1.png')}}" alt="#"/></figure>
-                              <h3>Computer</h3>
+                              <h3><a href="/computer" style="color: white;">Computer</a></h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
                               <figure><img src="{{asset('user/images/product2.png')}}" alt="#"/></figure>
-                              <h3>Laptop</h3>
+                              <h3><a href="/laptop" style="color: white;">Laptop</a></h3>
                            </div>
                         </div>
                         <div class="col-md-4 margin_bottom1">
                            <div class="product_box">
                               <figure><img src="{{asset('user/images/product3.png')}}" alt="#"/></figure>
-                              <h3>Tablet</h3>
+                              <h3><a href="/tablet" style="color: white;">Tablet</a></h3>
                            </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="{{asset('user/images/product4.png')}}" alt="#"/></figure>
-                              <h3>Speakers</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="{{asset('user/images/product5.png')}}" alt="#"/></figure>
-                              <h3>internet</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4 margin_bottom1">
-                           <div class="product_box">
-                              <figure><img src="{{asset('user/images/product6.png')}}" alt="#"/></figure>
-                              <h3>Hardisk</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="{{asset('user/images/product7.png')}}" alt="#"/></figure>
-                              <h3>Rams</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="{{asset('user/images/product8.png')}}" alt="#"/></figure>
-                              <h3>Bettery</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-4">
-                           <div class="product_box">
-                              <figure><img src="{{asset('user/images/product9.png')}}" alt="#"/></figure>
-                              <h3>Drive</h3>
-                           </div>
-                        </div>
-                        <div class="col-md-12">
-                           <a class="read_more" href="#">See More</a>
                         </div>
                      </div>
                   </div>
@@ -349,120 +302,11 @@
       </div>
       <!-- end laptop  section -->
       <!-- customer -->
-      <div class="customer">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Customer Review</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div id="myCarousel" class="carousel slide customer_Carousel " data-ride="carousel">
-                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                     </ol>
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <div class="container">
-                              <div class="carousel-caption ">
-                                 <div class="row">
-                                    <div class="col-md-9 offset-md-3">
-                                       <div class="test_box">
-                                          <i><img src="{{asset('user/images/cos.png')}}" alt="#"/></i>
-                                          <h4>Sandy Miller</h4>
-                                          <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <div class="row">
-                                    <div class="col-md-9 offset-md-3">
-                                       <div class="test_box">
-                                          <i><img src="{{asset('user/images/cos.png')}}" alt="#"/></i>
-                                          <h4>Sandy Miller</h4>
-                                          <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <div class="row">
-                                    <div class="col-md-9 offset-md-3">
-                                       <div class="test_box">
-                                          <i><img src="{{asset('user/images/cos.png')}}" alt="#"/></i>
-                                          <h4>Sandy Miller</h4>
-                                          <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                     <span class="sr-only">Previous</span>
-                     </a>
-                     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                     <span class="sr-only">Next</span>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+     
       <!-- end customer -->
 
       <!--  contact -->
-      <div class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Contact Now</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message </textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </div>
-      </div>
+      
       <!-- end contact -->
       <!--  footer -->
       <footer>
@@ -472,9 +316,8 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <img class="logo1" src="{{asset('user/images/logo21.png')}}" alt="#"/>
                      <ul class="social_icon">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                      </ul>
                   </div>
@@ -489,13 +332,6 @@
                      <ul class="conta">
                         <li>dolor sit amet,<br> consectetur <br>magna aliqua.<br> quisdotempor <br>incididunt ut e </li>
                      </ul>
-                  </div>
-                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                     <form class="bottom_form">
-                        <h3>Newsletter</h3>
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="sub_btn">subscribe</button>
-                     </form>
                   </div>
                </div>
             </div>

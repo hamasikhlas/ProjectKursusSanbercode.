@@ -24,4 +24,33 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function tablet()
+    {
+        return view('tablet');
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function laptop()
+    {
+        return view('laptop');
+    }
+
+    public function computer()
+    {
+        return view('computer');
+    }
+
+    public function produk()
+    {
+        return view('produk');
+    }
+
+    public function master()
+    {
+        return view('layout.master');
+    }
 }
