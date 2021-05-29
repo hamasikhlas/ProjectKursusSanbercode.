@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use Illuminate\Database\Eloquent\Builder;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,10 @@ class HomeController extends Controller
     }
     public function tablet()
     {
-        return view('tablet');
+        $product = Product::whereHas('productCategories', function (Builder $query) {
+            $query->where('name', 'like', '%TABLET%');
+          })->get();
+        return view('tablet', compact('product'));
     }
 
     public function about()
@@ -38,12 +42,18 @@ class HomeController extends Controller
 
     public function laptop()
     {
-        return view('laptop');
+        $product = Product::whereHas('ProductCategories', function (Builder $query) {
+            $query->where('name', 'like', '%LAPTOP%');
+            })->get();
+        return view('laptop',compact('product'));
     }
 
     public function computer()
     {
-        return view('computer');
+        $product = Product::whereHas('productCategories', function (Builder $query) {
+            $query->where('name', 'like', '%KOMPUTER%');
+            })->get();
+        return view('computer',compact('product'));
     }
 
     public function produk()

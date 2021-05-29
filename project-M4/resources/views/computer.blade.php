@@ -122,53 +122,23 @@
                      </div>
                    </div>
                   
-                         <div class="row my-3">
-                             <div class="col">
-                                 <div class="card ">
-                                     <img src="{{asset('user/images/a.jpg')}}" class="card-img-top" alt="...">
-                                     <div class="card-body">
-                                       <h5 class="card-title">Predator Helios 300</h5>
-                                       <h6>RP.40.000.00</h6>
-                                       <p class="card-text">Predator Helios 300 leptop yang dibekali....</p>
-                                       <a href="#" class="btn btn-primary">Beli</a>
-                                     </div>
-                                   </div>
-                             </div>
-                             <div class="col">
-                                 <div class="card">
-                                     <img src="{{asset('user/images/h.jpg')}}" class="card-img-top" alt="...">
-                                     <div class="card-body">
-                                       <h5 class="card-title">Predator Helios PH717</h5>
-                                       <h6>RP.50.000.00</h6>
-                                       <p class="card-text">Predator Helios PH717 leptop yang dibekali....</p>
-                                       <a href="#" class="btn btn-primary">Beli</a>
-                                     </div>
-                                   </div>
-                             </div>
-                             <div class="col">
-                                 <div class="card">
-                                     <img src="{{asset('user/images/m.jpg')}}" class="card-img-top" alt="...">
-                                     <div class="card-body">
-                                       <h5 class="card-title">Predator Triton 700</h5>
-                                       <h6>RP.60.000.00</h6>
-                                       <p class="card-text">Predator Triton 700 leptop yang dibekali....</p>
-                                       <a href="#" class="btn btn-primary">Beli</a>
-                                     </div>
-                                   </div>
-                             </div>
-                             <div class="col">
-                                 <div class="card">
-                                     <img src="{{asset('user/images/s.jpg')}}" class="card-img-top" alt="...">
-                                     <div class="card-body">
-                                       <h5 class="card-title">Predator Triton 900 </h5>
-                                       <h6>RP.70.000.00</h6>
-                                       <p class="card-text">Predator Triton 900 leptop yang dibekali....</p>
-                                       <a href="#" class="btn btn-primary">Beli</a>
-                                     </div>
-                                   </div>
-                             </div>
-                         </div>
-                   </div>
+                   <div class="row my-3">
+                     @forelse ($product as $key=>$p)
+                     <div class="col">
+                        <div class="card d-flex justify-content-start">
+                           @foreach ($p->ProductImages as $item)
+                           <img src="{{$item->image_url}}" class="card-img-top" style="width: 20%;height: 30%;">
+                           @endforeach
+                           <div class="card-body">
+                              <h5 class="card-title">{{$p->name}}</h5>
+                              <p class="card-text">{{$p->description}}</p>
+                           </div>
+                        </div>  
+                     </div> 
+                     @empty
+                     <h1>NO DATA</h1>
+                     @endforelse 
+                  </div>              
               
                         
                      

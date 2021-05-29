@@ -46,8 +46,9 @@ class ProductController extends Controller
             'nama'=>'required',
             'description'=>'required',
             'productCategory'=>'required',
-            'uploadFile'=>'required',
-            'uploadFile.*'=>'mimes:jpeg,png,jpg|max:2048',
+            // ini jangan diubah, ga tahu kenapa di tempat hamas jadi bbikin ga jalan
+            // 'uploadFile'=>'required',
+            // 'uploadFile.*'=>'mimes:jpeg,png,jpg|max:2048',
         ]);
 
         $product = Product::create([
