@@ -56,12 +56,13 @@ class ProductController extends Controller
             'product_category_id'=>$request->productCategory
         ]);
 
+        $i=0;
        if($request->hasFile('uploadFile')){
            $uploads = $request->file('uploadFile');
 
            foreach ($uploads as $files) {
             $tujuan_upload = public_path().'/data_file';
-            $nama_file = time().'.'.$files->getClientOriginalExtension();
+            $nama_file = $i.'-'.time().'.'.$files->getClientOriginalExtension();
             $files->move($tujuan_upload, $nama_file);
             // $productImg->name=$nama_file;
             // $productImg->image_url='/data_file/'.$nama_file;
@@ -71,6 +72,7 @@ class ProductController extends Controller
                     'image_url'=>'/data_file/'.$nama_file,
                     'image_description'=>$request->description
                 ]);
+                $i++;
            }
         // $file = $request->file('uploadFile');
         // $nama_file = time()."_".$file->getClientOriginalName();
@@ -95,7 +97,7 @@ class ProductController extends Controller
     public function show($id)
     {
         //
-        $product = Product::with('ProductCategories')->find($id);
+        $product = Product::with('ProductCategories','ProductImages')->find($id);
         return view('product.productShow',compact('product'));
     }
 

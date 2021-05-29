@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Product;
+
 class HomeController extends Controller
 {
     /**
@@ -10,10 +12,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -46,7 +48,8 @@ class HomeController extends Controller
 
     public function produk()
     {
-        return view('produk');
+        $product = Product::with('ProductCategories','ProductImages')->get();
+        return view('produk',compact('product'));
     }
 
     public function master()

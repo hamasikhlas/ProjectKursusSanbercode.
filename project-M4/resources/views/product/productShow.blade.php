@@ -18,13 +18,17 @@
             <option value="{{$product->ProductCategories->id}}">{{$product->ProductCategories->name}}::{{$product->ProductCategories->description}}</option>
           </select>
         </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="{{$product->ProductImages->image_url}}" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">{{$product->ProductImages->image_description}}</p>
-          </div>
+        <div class="card-group">
+          @foreach ($product->ProductImages as $img )
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{$img->image_url}}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">{{$img->image_description}}</p>
+            </div>
         </div>
-        <a class="btn btn-primary" href="/product" role="button">Kembali</a>
+        @endforeach
+        </div>
+        <a class="btn btn-primary mt-3" href="/product" role="button">Kembali</a>
       </form>
 </div>
 @endsection
