@@ -14,4 +14,4 @@ WEBSITE REVIEW LAPTOP, KOMPUTER, DAN TABLET
 ![](public/ERD-TABLE.png)
 
 ## LINK VIDEO
-Link Demo Aplikasi : 
+Link Demo Aplikasi : https://youtu.be/HDNjmFFG8bw
