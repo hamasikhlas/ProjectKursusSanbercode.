@@ -27,6 +27,8 @@ Route::get('/computer', 'HomeController@computer');
 Route::get('/laptop', 'HomeController@laptop');
 Route::get('/tablet', 'HomeController@tablet');
 Route::get('/about', 'HomeController@about');
+Route::get('/contact', 'HomeController@contact');
+Route::post('/post-contact', 'HomeController@postContact');
 
 Route::group(['middleware' => ['auth']], function () {
     

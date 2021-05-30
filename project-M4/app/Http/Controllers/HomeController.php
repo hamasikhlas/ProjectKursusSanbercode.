@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\ContactUs;
+use App\Mail\WelcomeMail;
 use Illuminate\Http\Request;
 use App\Product;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -65,5 +68,29 @@ class HomeController extends Controller
     public function master()
     {
         return view('layout.master');
+    }
+
+    public function contact(){
+        return view('contact');
+    }
+
+    public function postContact(Request $request){
+
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'phone_number'=>'required',
+            'message'=>'required',
+        ]);
+        $contact = ContactUs::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'phone_number'=>$request->phone_number,
+            'message'=>$request->message
+        ]);
+        $contact->save();
+        //send email
+        Mail::to($request->email)->send(new WelcomeMail());
+        return redirect('/contact');
     }
 }

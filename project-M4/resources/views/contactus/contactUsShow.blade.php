@@ -18,9 +18,10 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" disabled></textarea>
+          <input type="text" class="form-control" value="{{$contact->message}}" disabled>
+          {{-- <textarea class="form-control" id="exampleFormControlTextarea1" value="{{$contact->message}}" rows="4" disabled></textarea> --}}
         </div>
-        <a class="btn btn-primary" href="/product" role="button">Kembali</a>
+        <a class="btn btn-primary" href="/contactus" role="button">Kembali</a>
       </form>
 </div>
 @endsection
