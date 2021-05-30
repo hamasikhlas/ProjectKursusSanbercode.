@@ -46,7 +46,7 @@
                      <div class="full">
                         <div class="center-desk">
                            <div class="logo">
-                              <a href="index.html"><img src="{{asset("user/images/logo21.png")}}" alt="#" /></a>
+                              <a href="/master"><img src="{{asset("user/images/logo21.png")}}" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -61,7 +61,7 @@
                               <li class="nav-item ">
                                  <a class="nav-link" href="/">Home</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="/produk">Products</a>
                               </li>
                               <li class="nav-item">
@@ -76,6 +76,12 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="/about">About</a>
                               </li>
+                              <li class="nav-item">
+                                  <a class="nav-link" href="/contact">Contact</a>
+                               </li>
+                               <li class="nav-item">
+                                  <a class="nav-link" href="/login">Login</a>
+                               </li>
                            </ul>
                         </div>
                      </nav>

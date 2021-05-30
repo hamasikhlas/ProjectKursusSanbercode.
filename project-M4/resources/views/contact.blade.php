@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -14,6 +12,8 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
+      <!-- csrf-token -->
+      <meta name="csrf-token" content="{{ csrf_token() }}">
       <!-- bootstrap css -->
       <link rel="stylesheet" href="{{asset('user/css/bootstrap.min.css')}}">
       <!-- style css -->
@@ -24,6 +24,8 @@
       <link rel="icon" href="{{asset('user/images/fevicon.png')}}" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="{{asset('user/css/jquery.mCustomScrollbar.min.css')}}">
+      <!-- Sweet Alert 2-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -32,10 +34,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout inner_posituong computer_page">
+   <body class="main-layout inner_posituong contact_page">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="{{asset('user/images/loading.gif')}}" alt="#" /></div>
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
       </div>
       <!-- end loader -->
       <!-- header -->
@@ -59,32 +61,32 @@
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarsExample04">
-                           <ul class="navbar-nav mr-auto">
-                              <li class="nav-item ">
-                                 <a class="nav-link" href="/">Home</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/produk">Products</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/computer">Computer</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/laptop">Laptop</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/tablet">Tablet</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/about">About</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link" href="/contact">Contact</a>
-                               </li>
-                               <li class="nav-item">
-                                  <a class="nav-link" href="/login">Login</a>
-                               </li>
-                           </ul>
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item ">
+                                   <a class="nav-link" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/produk">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/computer">Computer</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/laptop">Laptop</a>
+                                </li>
+                                <li class="nav-item">
+                                   <a class="nav-link" href="/tablet">Tablet</a>
+                                </li>
+                                <li class="nav-item active">
+                                   <a class="nav-link" href="/about">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/contact">Contact</a>
+                                 </li>
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="/login">Login</a>
+                                 </li>
+                             </ul>
                         </div>
                      </nav>
                   </div>
@@ -94,37 +96,55 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-      <!-- about section -->
-      <div class="about">
+      <!--  contact -->
+      <div class="contact">
          <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-5">
+            <div class="row">
+               <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Tentang Website Kel.13</h2>
-                     <p>Jelasan apa aja deh di sinih terserah mau apa aja yang penting ada isi nya okee...</p>
-                     <a class="read_more" href="#">Read More</a>
+                     <h2>Contact Now</h2>
                   </div>
                </div>
-               <div class="col-md-7">
-                  <div class="about_img">
-                     <figure><img src="{{asset('user/images/about.jpg')}}" alt="#"/></figure>
-                  </div>
+            </div>
+            <div class="row">
+               <div class="col-md-10 offset-md-1">
+                  <form method="POST" action="/post-contact" id="request" class="main_form">
+                     @csrf
+                     @method("POST")
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Name" type="type" name="name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email" type="type" name="email"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Phone Number" type="type" name="phone_number">                          
+                        </div>
+                        <div class="col-md-12">
+                           <textarea class="textarea" placeholder="Message" type="type" Message="Name" name="message"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn" type="submit" id="btn-submit">Send</button>
+                        </div>
+                     </div>
+                  </form>
                </div>
             </div>
          </div>
       </div>
-      </div>
-      <!-- end about section -->
+      <!-- end contact -->
       <!--  footer -->
       <footer>
          <div class="footer">
             <div class="container">
                <div class="row">
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                     <img class="logo1" src="{{asset('user/images/logo21.png')}}" alt="#"/>
+                     <img class="logo1" src="images/logo1.png" alt="#"/>
                      <ul class="social_icon">
-                        <li><a href="facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                      </ul>
                   </div>
@@ -140,7 +160,13 @@
                         <li>dolor sit amet,<br> consectetur <br>magna aliqua.<br> quisdotempor <br>incididunt ut e </li>
                      </ul>
                   </div>
-                  
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                     <form class="bottom_form">
+                        <h3>Newsletter</h3>
+                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                        <button class="sub_btn">subscribe</button>
+                     </form>
+                  </div>
                </div>
             </div>
             <div class="copyright">
@@ -163,6 +189,28 @@
       <!-- sidebar -->
       <script src="{{asset('user/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
       <script src="{{asset('user/js/custom.js')}}"></script>
+      <!-- sweet alert -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+      <script type="text/javascript">
+         $(document).on('click', '#btn-submit', function(e) {
+               e.preventDefault();
+               swal({
+                  title: 'Confirm',
+                  confirmButtonText: 'Continue',
+                  inputValidator: function (result) {
+                        return new Promise(function (resolve, reject) {
+                           if (result) {
+                              resolve();
+                           } else {
+                              reject('You need to agree with the Terms');
+                           }
+                        })
+                  }
+               }).then(function (result) {
+                  $('#request').submit();
+               });
+            });
+         </script>
    </body>
 </html>
 
