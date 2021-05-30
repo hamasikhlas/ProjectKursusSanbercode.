@@ -11,4 +11,4 @@
 WEBSITE REVIEW LAPTOP, KOMPUTER, DAN TABLET
 
 ## ERD
-![ScreenShot](https://gitlab.com/hamas212/project-m4/-/blob/master/project-M4/public/ERD-TABLE.png)
+<img src="https://gitlab.com/hamas212/project-m4/-/blob/master/project-M4/public/ERD-TABLE.png" width="500" height="600"/>
