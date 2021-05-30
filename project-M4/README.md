@@ -11,11 +11,11 @@
 WEBSITE REVIEW LAPTOP, KOMPUTER, DAN TABLET
 
 ## ERD
-![0](public/ERD-TABLE.png)
+![alt text](public/ERD-TABLE.png "GAMBAR ERD")
 
 ## LINK VIDEO
 Link Demo Aplikasi : https://youtu.be/HDNjmFFG8bw
 
 ## capture notifikasi email contact us di SMTP mailtrap
-![1](public/capture_email_smtp_contact_us_1.png)
-![2](public/capture_email_smtp_contact_us_2.png)
+![alt text1](public/capture_email_smtp_contact_us_1.png "smtp 1")
+![alt text2](public/capture_email_smtp_contact_us_2.png "smtp 2")
