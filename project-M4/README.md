@@ -11,5 +11,4 @@
 WEBSITE REVIEW LAPTOP, KOMPUTER, DAN TABLET
 
 ## ERD
-
-{{asset('ERD-TABLE.png')}}
+<img src="{{asset('public/ERD-TABLE.png')}}" alt="My cool logo"/>
