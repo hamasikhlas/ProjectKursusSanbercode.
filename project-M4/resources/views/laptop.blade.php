@@ -93,7 +93,7 @@
          <div class="col">
             <div class="card d-flex justify-content-start">
                @foreach ($p->ProductImages as $item)
-               <img src="{{$item->image_url}}" class="card-img-top" style="width: 20%;height: 30%;">
+               <img src="{{$item->image_url}}" class="card-img-top" style="width: 50%;height: 80%;">
                @endforeach
                <div class="card-body">
                   <h5 class="card-title">{{$p->name}}</h5>
@@ -102,7 +102,6 @@
             </div>  
          </div> 
          @empty
-         <h1>NO DATA</h1>
          @endforelse 
       </div>
       <!-- end laptop1 -->
@@ -122,13 +121,13 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <h3>About Us</h3>
                      <ul class="about_us">
-                        <li>dolor sit amet, consectetur<br> magna aliqua. Ut enim ad <br>minim veniam, <br> quisdotempor incididunt r</li>
+                        <li>Semoga Terhibur dengan Website Yang kami tampilkan</li>
                      </ul>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <h3>Contact Us</h3>
                      <ul class="conta">
-                        <li>dolor sit amet,<br> consectetur <br>magna aliqua.<br> quisdotempor <br>incididunt ut e </li>
+                        <li>0212343434232<br>kel.12@gmail.com<br>kel.12@website.com</li>
                      </ul>
                   </div>
                </div>

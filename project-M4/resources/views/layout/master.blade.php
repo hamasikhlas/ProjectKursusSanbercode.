@@ -324,13 +324,13 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <h3>About Us</h3>
                      <ul class="about_us">
-                        <li>dolor sit amet, consectetur<br> magna aliqua. Ut enim ad <br>minim veniam, <br> quisdotempor incididunt r</li>
+                        <li>Semoga Terhibur dengan Website Yang kami tampilkan</li>
                      </ul>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <h3>Contact Us</h3>
                      <ul class="conta">
-                        <li>dolor sit amet,<br> consectetur <br>magna aliqua.<br> quisdotempor <br>incididunt ut e </li>
+                        <li>0212343434232<br>kel.12@gmail.com<br>kel.12@website.com</li>
                      </ul>
                   </div>
                </div>

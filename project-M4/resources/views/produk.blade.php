@@ -88,12 +88,47 @@
       <!-- end header -->
       <!-- products -->
       <br>
-      <div class="row my-3">
+      <div class="row">
+         <div class="col-2">
+         <div class="list-group">
+             <a href="#" class="list-group-item list-group-item-action">CATEGORIES</a>
+             <a href="/computer" class="list-group-item list-group-item-action list-group-item-primary">Computer</a>
+             <a href="/laptop" class="list-group-item list-group-item-action list-group-item-secondary">Laptop </a>
+             <a href="tablet" class="list-group-item list-group-item-action list-group-item-success">Tablet</a>
+    
+            </div>
+         </div>
+         <div class="col-9">
+         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="{{asset('user/images/pc111.png')}}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{asset('user/images/a.jpg')}}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+               <img src="{{asset('user/images/about.jpg')}}" class="d-block w-100" alt="...">
+             </div>
+            </div>
+         </div>
+{{--          
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="{{asset('user/images/pc111.png')}}" class="d-block w-1000" alt="...">
+                  </div> 
+                  <div class="carousel-item active">
+                     <img src="{{asset('user/images/about.jpg')}}" class="d-block w-1000" alt="...">
+                 </div> 
+                   --}}
+                  <br>
+      <div class="row ">
          @forelse ($product as $key=>$p)
-         <div class="col">
+         <div class="col-3">
             <div class="card d-flex justify-content-start">
                @foreach ($p->ProductImages as $item)
-               <img src="{{$item->image_url}}" class="card-img-top" style="width: 20%;height: 30%;">
+               <img src="{{$item->image_url}}" class="card-img-top" style="width: 500%;height: 500%;">
                @endforeach
                <div class="card-body">
                   <h5 class="card-title">{{$p->name}}</h5>
@@ -102,12 +137,11 @@
             </div>  
          </div> 
          @empty
-         <h1>NO DATA</h1>
          @endforelse 
       </div>
       <!-- end products -->
       <!--  footer -->
-      <footer>
+      {{-- <footer>
          <div class="footer">
             <div class="container">
                <div class="row">
@@ -122,13 +156,13 @@
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <h3>About Us</h3>
                      <ul class="about_us">
-                        <li>dolor sit amet, consectetur<br> magna aliqua. Ut enim ad <br>minim veniam, <br> quisdotempor incididunt r</li>
+                        <li>Semoga Terhibur dengan Website Yang kami tampilkan</li>
                      </ul>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                      <h3>Contact Us</h3>
                      <ul class="conta">
-                        <li>dolor sit amet,<br> consectetur <br>magna aliqua.<br> quisdotempor <br>incididunt ut e </li>
+                        <li>0212343434232<br>kel.12@gmail.com<br>kel.12@website.com</li>
                      </ul>
                   </div>
                </div>
@@ -143,7 +177,7 @@
                </div>
             </div>
          </div>
-      </footer>
+      </footer> --}}
       <!-- end footer -->
       <!-- Javascript files-->
       <script src="{{asset('user/js/jquery.min.js')}}"></script>

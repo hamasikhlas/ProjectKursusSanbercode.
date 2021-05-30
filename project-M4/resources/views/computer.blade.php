@@ -89,45 +89,21 @@
       <!-- end header -->
       <!-- laptop  section -->
       <br>
-      <div class="row">
-         <div class="col-2">
-         <div class="list-group">
-             <a href="#" class="list-group-item list-group-item-action">CATEGORIES</a>
-             <a href="/computer" class="list-group-item list-group-item-action list-group-item-primary">Computer</a>
-             <a href="/laptop" class="list-group-item list-group-item-action list-group-item-secondary">Laptop </a>
-             <a href="tablet" class="list-group-item list-group-item-action list-group-item-success">Tablet</a>
-             <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Samsung</a>
-             <a href="#" class="list-group-item list-group-item-action list-group-item-warning">apple</a>
-             <a href="#" class="list-group-item list-group-item-action list-group-item-info">HP</a>
-             <a href="#" class="list-group-item list-group-item-action list-group-item-light">Asus</a>
-             <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Acer</a>
-           </div>
+      <div class="container">
+         <div class="=row">
+            <div class="col-md-3 col-sm6">
+
+            </div>
          </div>
- 
-             <div class="col-7">
-                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                     <div class="carousel-inner">
-                       <div class="carousel-item active">
-                           <img src="{{asset('user/images/h.jpg')}}" class="d-block w-100" alt="...">
-                       </div>
-                       <div class="carousel-item">
-                         <img src="{{asset('user/images/a.jpg')}}" class="d-block w-100" alt="...">
-                       </div>
-                       <div class="carousel-item">
-                         <img src="{{asset('user/images/m.jpg')}}" class="d-block w-100" alt="...">
-                       </div>
-                       <div class="carousel-item">
-                         <img src="{{asset('user/images/s.jpg')}}" class="d-block w-100" alt="...">
-                       </div>
-                     </div>
-                   </div>
-                  
+
+      </div>
+
                    <div class="row my-3">
                      @forelse ($product as $key=>$p)
                      <div class="col">
                         <div class="card d-flex justify-content-start">
                            @foreach ($p->ProductImages as $item)
-                           <img src="{{$item->image_url}}" class="card-img-top" style="width: 20%;height: 30%;">
+                           <img src="{{$item->image_url}}" class="img-fluid">
                            @endforeach
                            <div class="card-body">
                               <h5 class="card-title">{{$p->name}}</h5>
@@ -136,7 +112,6 @@
                         </div>  
                      </div> 
                      @empty
-                     <h1>NO DATA</h1>
                      @endforelse 
                   </div>              
               
@@ -146,7 +121,41 @@
       <!-- end laptop  section -->
       <!--  footer -->
       <footer>
-         
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                     <img class="logo1" src="{{asset('user/images/logo21.png')}}" alt="#"/>
+                     <ul class="social_icon">
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                     <h3>About Us</h3>
+                     <ul class="about_us">
+                        <li>Semoga Terhibur dengan Website Yang kami tampilkan</li>
+                     </ul>
+                  </div>
+                  <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                     <h3>Contact Us</h3>
+                     <ul class="conta">
+                        <li>0212343434232<br>kel.12@gmail.com<br>kel.12@website.com</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div> 
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
